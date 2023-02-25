@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --first-color: #AA4A44;
+    --second-color: #fee0cc;
+}
+body {
+    background-color: var(--second-color);
+}
+/* Main */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: var(--first-color);
+    box-shadow: 0 4px 14px #301d1e1a;
+}
+header a {
+    font-size: 1.5rem;
+    color: #FFF;
+    transition: opacity 0.4s;
+}
+header a:hover {
+    opacity: 0.75;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 13rem;
+}
+.container h1 {
+    font-size: 7rem;
+    font-weight: 700;
+}
+.span-text {
+    display: inline-block;
+    transform: rotate(-20deg);
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+.span-text:hover {
+    transform: rotate(0deg);
+}
+.container ul {
+    margin-top: 2.5rem;
+    cursor: pointer;
+}
+.container a {
+    font-size: 1.95rem;
+    color: var(--first-color);
+    padding: 0.55rem;
+    transition: text-decoration 0.4s;
+    transition: opacity 0.4s;
+}
+.container .a1 {
+    border: 1px solid var(--first-color);
+    border-radius: 5px;
+    transition: all 0.65s;
+}
+.container .a1:hover {
+    border: none;
+    background: var(--first-color);
+    color: #FFF;
+}
+.container .a2 {
+    transition: all 0.65s;
+    margin-left: 1rem;
+}
+.container .a2:hover {
+    border: 1px solid var(--first-color);
+    border-radius: 5px;
+}
+/* Contents */
+.post {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 1.5rem;
+}
+.post-box {
+    background: var(--bg-color);
+    box-shadow: 0 4px 14px #301d1e1a;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+.post-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+.post-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--first-color);
+    /* To remain title in 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.post-date {
+    display: flex;
+    font-size: 0.79rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+    font-style: italic;
+}
+.post-description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+}
+/* btn utilities */
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons ul {
+    margin-top: 2.5rem;
+    cursor: pointer;
+}
+.buttons a {
+    font-size: 1.95rem;
+    color: var(--first-color);
+    padding: 0.55rem;
+    transition: text-decoration 0.4s;
+    transition: opacity 0.4s;
+}
+.buttons .a1 {
+    border: 1px solid var(--first-color);
+    border-radius: 5px;
+    transition: all 0.65s;
+}
+.buttons .a1:hover {
+    border: none;
+    background: var(--first-color);
+    color: #FFF;
+}
+.buttons .a2 {
+    transition: all 0.65s;
+    margin-left: 1rem;
+}
+.buttons .a2:hover {
+    border: 1px solid var(--first-color);
+    border-radius: 5px;
+}
+@media screen and (max-width: 800px) {
+    /* Main */
+    .container h1 {
+        font-size: 5.45rem;
+    }
+    .container a {
+        font-size: 1.55rem;
+    }
+    .buttons a {
+        font-size: 1.55rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* Main */
+    header a {
+        font-size: 1.25rem;
+    }
+    .container h1 {
+        font-size: 4.5rem;
+    }
+    .container a {
+        font-size: 1.25rem;
+    }
+    .buttons a {
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    /* Main */
+    header a {
+        font-size: 1.05rem;
+    }
+    .container h1 {
+        font-size: 4rem;
+    }
+    .container a {
+        font-size: 1.05rem;
+    }
+    .buttons a {
+        font-size: 1.05rem;
+    }
+}
